@@ -8,7 +8,7 @@ class BookInfo(models.Model):
     bpub_date = models.DateTimeField()
 
     def __str__(self):
-        return "%d" % self.pk
+        return self.btitle
 
 
 # 英雄类
@@ -19,4 +19,4 @@ class HeroInfo(models.Model):
     hbook = models.ForeignKey('BookInfo', on_delete=models.CASCADE)
 
     def __str__(self):
-        return '%d' % self.pk
+        return self.hname
